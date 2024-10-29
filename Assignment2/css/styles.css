@@ -638,8 +638,12 @@ i[class*="fi fi-rr-arrow"]:hover {
 }
 
 .overlap-2 {
-  width: 600px;
-  height: 500px;
+  width: 50vw;
+  height: 100vh;    
+  background-image: url("/img/prod\ (17\).jpg");
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .JBL-BOOMBOX-HERO {
@@ -959,24 +963,30 @@ i[class*="fi"]:hover {
 .frame-38 {
   background-color: #0d0d0d;
   border-radius: 4px;
-  display: flex;
-  justify-content: flex-end;
+  display: grid;
+  grid-template-areas: "desc image";
+  height: 350px;
+  width: 100%;
+  padding: 2em;
+  column-gap: 2em;
 }
 
 .overlap-group-5 {
-  background-image: url(/img/CannedGoods_variety.jpg);
-  height: 350px;
-  width: 100%;
-  position: relative;
+  grid-area: "image";
+  background-image: url("/img/prod \(36\).JPG");
   background-size: 100% auto;
+  /* height: 350px; */
+  width: 15em;
 }
 
 .frame-39 {
-  display: flex;
+  grid-area: "desc";
+  width: 15em;
+  /* display: flex;
   flex-direction: column;
   align-items: flex-end;
   padding: 2rem;
-  gap: 16px;
+  gap: 16px; */
 }
 
 .text-wrapper-31 {
@@ -1144,7 +1154,7 @@ footer {
 .snackSection {
   grid-area: snackSection;
   background-color: #000000;
-  background-image: url(/img/showcase.jpg);
+  background-image: url("/img/prod\ (37\).JPG");
   background-size: 100% 100%;
 }
 
@@ -1529,9 +1539,14 @@ textarea {
   }
 
   .overlap-2 {
-    width: 330px;
-    height: auto;
+    width: 100vw;
+    height: 50vh;    
+    background-image: url("/img/prod\ (17\).jpg");
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
   }
+
   .frame-38 {
     display: flex;
     flex-direction: column;
