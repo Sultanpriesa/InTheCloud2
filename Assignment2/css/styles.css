@@ -387,13 +387,16 @@ i[class*="fi fi-rr-arrow"]:hover {
 }
 
 .frame-15 {
+  width: 90vw;
+  padding-left: 1em;
+  padding-right: 1em;
   display: flex;
   align-items: flex-end;
   gap: 30px;
   flex-direction: row;
   flex-wrap: wrap;
   align-content: space-around;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .category-choice a {
