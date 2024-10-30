@@ -1480,15 +1480,14 @@ textarea {
   padding: 2em 0;
   text-align: center;
 }
+
 @media only screen and (max-width: 768px) {
   nav ul {
     padding: 0;
     margin: 0;
   }
 
-  .logo {
-    display: none;
-  }
+  .logo,
   .options {
     display: none;
   }
@@ -1496,24 +1495,34 @@ textarea {
   #menu {
     display: flex;
     font-size: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
   }
 
-  .frame {
-    gap: 0px;
+  .frame,
+  .frame-38,
+  .frame-15 {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
   }
+
   .frame-2 {
     display: none;
   }
 
-  /* nav for mobile using grid */
+  /* Mobile nav using grid */
   nav {
     display: grid;
-    gap: 0;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
       "top-header top-header"
       ". burger-menu";
+    gap: 0;
   }
+
   .burger-menu {
     display: flex;
     justify-content: flex-end;
@@ -1521,24 +1530,16 @@ textarea {
     padding-right: 10px;
     grid-area: burger-menu;
   }
-  .frame-15 {
-    display: flex;
-    flex-direction: column;
-  }
 
-  .highlights-carousel-bg {
+  .highlights-carousel-bg,
+  .highlights-2-bg {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 50px 25px;
   }
-  .highlights-2-bg {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+
   .highlights-2 {
     align-items: center;
     width: 85%;
@@ -1546,27 +1547,25 @@ textarea {
 
   .overlap-2 {
     width: 100vw;
-    height: 50vh;    
+    height: 50vh;
     background-image: url("/img/prod\ (17\).jpg");
-    background-size: cover; 
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
 
-  .frame-38 {
-    display: flex;
-    flex-direction: column;
-  }
   .new-arrival {
-    width: 75vw;
+    display: grid;
+    width: 100%;
     grid-template-columns: 1fr;
-    gap: 1em 2%;
+    gap: 1em 0;
     grid-template-areas:
       "snackSection"
       "Canned-Goods"
       "sackRice"
       "Sauce";
   }
+
   .gap {
     display: flex;
     flex-direction: column;
@@ -1574,43 +1573,38 @@ textarea {
     justify-content: center;
   }
 
-  .contact {
+  .contact,
+  .about {
+    display: flex;
     flex-direction: column;
     gap: 0px;
+    align-items: center;
   }
 
-  .contact .frame-5 {
+  .contact .frame-5,
+  .about .frame-5 {
     width: 90vw;
     margin: 0;
   }
 
-  .contact .frame-8 {
-    width: 80vw;
-  }
-
-  .about {
-    flex-direction: column;
-    gap: 0px;
-  }
-
-  .about .frame-5 {
-    width: 90vw;
-  }
-
+  .contact .frame-8,
   .about .frame-8 {
     width: 80vw;
   }
 
   footer {
-    height: 450px;
+    display: grid;
+    height: auto;
     align-items: center;
-    gap: 30px;
+    gap: 15px;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.1fr 0.1fr 0.1fr;
+    grid-template-rows: repeat(3, auto);
     grid-template-areas:
-      " support "
-      " quick-links  "
-      " Copyright ";
+      "support"
+      "quick-links"
+      "copyright";
+    padding: 20px 0;
+    text-align: center;
   }
 
   .hide {
@@ -1621,11 +1615,12 @@ textarea {
     display: flex;
     width: 100vw;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     top: 100px;
     bottom: 0;
     right: 0;
     z-index: 100;
     background-color: #f7f5e6;
+    overflow-y: auto;
   }
 }
